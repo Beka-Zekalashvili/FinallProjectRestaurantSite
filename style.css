@@ -1,0 +1,249 @@
+ body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    min-height: max-content;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+.background-image {
+    background-image: url(./img/chinemenu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+ul {
+    display: flex;
+    justify-content: space-around; 
+    /* text-align: center; */
+    list-style: none;
+    cursor: pointer;
+    border-bottom: 2px solid #C4282B;
+    font-weight: 900;
+    color: white;
+    line-height: 50px;
+    padding: 20px 0;
+}
+ 
+.nav-li{
+    display: block; /* ელემენტები ვერტიკალურად განლაგდება */
+   text-align: center;
+   justify-items: center;
+   align-items: start;
+    padding: 0px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease; 
+}
+
+
+.nav-li:hover{
+    background-color: rgba(128, 128, 128, 0.221);
+}
+
+.li-all:hover{
+    background-color: rgba(128, 128, 128, 0.221);
+}
+
+.cart-icon {
+position: relative;
+font-size: 20px;
+order:2;
+
+}
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: red;
+    font-size: 20px;
+}
+
+.cartBtn {
+    display: block;         
+    margin-top: 20px;      
+    padding: 10px 20px;      
+    font-size: 16px;         
+    border: none;            
+    cursor: pointer; 
+
+}
+
+.btn-add {
+    background-color: green;
+}
+
+.btn-subb {
+    background-color: #dc3535;
+}
+
+
+.btn-delete{
+    background-color: red;
+}
+
+
+.btn-deleteAll{
+    background-color: darkred;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #120E0F;
+    padding: 20px 0;
+}
+
+
+.card {
+    background-image: url(./img/images.jfif);
+    margin-top: 20px;
+    color: #FB631A !important;
+    width: 18rem;
+    border: 1px solid white !important;
+}
+#cart {
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    top: 100px;
+    width: 250px;
+    padding: 10px;
+    background: black;
+    color: white;
+    display: none;
+    max-height: 300px;
+    overflow-y: scroll; 
+    scrollbar-width:none;
+}
+
+#cart-items {
+    display: flex;
+    flex-direction: column;
+}
+.btn_for__add {
+    height: max-content;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+
+}
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+
+.filter-container{
+    text-align: center;
+    background-color: #120E0F;
+    color: white;
+    min-height: 100%;
+}
+
+ .form-range{
+    
+    width: 200px;
+} 
+
+/*  */
+
+
+
+
+.btn-primary{
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+}
+
+.btn-primary:hover{
+    background-color: #FB631A;
+}
+
+
+.burger {
+    display: none !important;
+    font-size: 30px;
+
+    
+}
+
+
+
+/* for-mobile */
+
+@media (max-width: 767px) {
+    .menu ul{
+        display: none;
+        padding: 0;
+        margin: 0;
+      
+    }
+
+   
+    
+    
+    .burger {
+      display: block !important;
+      position: fixed;
+      color: white;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+       
+    }
+
+    .menu.active ul{
+        display: block;
+      
+     
+    }
+
+.background-image{
+    height: 200px;
+    background-attachment: fixed;
+    
+}
+    
+    .card {
+        width: 180px;
+    
+        
+    }
+ 
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 20px; 
+    }
+
+    .menu li {
+     
+        font-size: 18px;
+    }
+}
